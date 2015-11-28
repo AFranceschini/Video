@@ -1,44 +1,193 @@
-<!doctype html>
-<html lang="fr">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <title>Test</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<title>Le Petit Marseillais</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/style_menu.css" />
 
-    <script src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/animations.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
 
-    <style>
-		.clic {
-			position:absolute; 
-			cursor:pointer;
-		}
-		html, body {
-			-webkit-tap-highlight-color:rgba(0,0,0,0);
-		}
-	</style>
+<link rel="stylesheet" href="css/looper.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script src="js/modernizr.custom.js"></script>
+
+
+<script type="text/javascript" src="js/anim.js"></script>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<style type="text/css">
+html, body {
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.clic {
+	position:absolute; 
+	cursor:pointer;
+    z-index: 100000000;
+}
+
+a { text-decoration: none; }
+ul li { list-style: none; }
+
+/* Enlève le contour bleu du bouton */
+.ui-button:focus, *:focus{
+	outline: none;
+}
+
+/* Enlève le contour pointillé sur Firefox */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+</style>
+
 </head>
+<body>
+    
+    <div class="container demo-1">
 
-<body style="width:100%;height: 100%; padding:0; margin:0; overflow:hidden;">
+    	<button class="btn_home" id="trigger-overlay" type="button"><img src="images/btn_home.jpg" alt="" /></button>
 
-	<div style="width:100%;height: 100%; padding:0; margin:0;">
-		<img src="images/slides/home.jpg" style="height: 100%; width:100%">
-	    <div class="clic" style="right:5%; bottom:15%; width:32%; height:20%;" onclick="location.href = 'slide.html'"></div>
+    	<div id="controlLooper" data-interval="false" class="looper slide xfade">
+		    <div class="looper-inner">
+		    	<div id="slide1" class="active item slide1">
+		    		<div class="mentions"><img src="images/anim5/mentions.png" alt="" /></div>
+					<div id="main-info" class="fadein"><img src="images/anim1/main-info.jpg" /></div>
+					<div id="graph02"><img src="images/anim1/utilisation-moyenne.png" /></div>
+					<div id="graph03"><img src="images/anim1/9sur10.png" /></div>
+					<div id="graph04"><img src="images/anim1/sep.png" /></div>
+					<div id="graph05"><img src="images/anim1/title-marche.png" /></div>
+					<div id="graph06" class="petite"><img src="images/anim1/marche-femme.png" /></div>
+					<div id="graph07" class="petite"><img src="images/anim1/marche-homme.png" /></div>
+					<div id="graph08"><img src="images/anim1/title-segment-parfume.png" /></div>
+					<div id="graph09" class="fadein"><img src="images/anim1/graph1-segment-parfume.png" /></div>
+					<div id="graph10"><img src="images/anim1/graph2-segment-parfume.png" /></div>
+					<img src="images/slides/slide1.jpg" alt="" />
+				</div>
+				<div id="slide2" class="item slide2">
+					<div id="graph01"><img src="images/anim2/title-innov.png" /></div>
+					<div id="graph02" class="fadein"><img src="images/anim2/graph-ca.png" /></div>
+					<div id="graph03"><img src="images/anim2/title-ca.png" /></div>
+					<div id="graph04" class="fadein"><img src="images/anim2/graph-contrib.png" /></div>
+					<div id="graph05"><img src="images/anim2/title-contrib.png" /></div>
+					<div id="graph06" class="fadein"><img src="images/anim2/sep-vertical.png" /></div>
+					<div id="graph07"><img src="images/anim2/title-choix.png" /></div>
+					<div id="graph08" class="fadein"><img src="images/anim2/graph-choix.png" /></div>
+					<img src="images/slides/slide2.jpg" alt="" />
+				</div>
+				<div id="slide3" class="item slide3">
+					<div id="graph01"><img src="images/anim3/title_conso.png" /></div>
+					<div id="graph02"><img src="images/anim3/title-rayon.png" /></div>
+					<div id="graph03" class="petite"><img src="images/anim3/graph-rayon.png" /></div>
+					<div id="graph04" class="fadein"><img src="images/anim3/sep-vertical.png" /></div>
+					<div id="graph05"><img src="images/anim3/title-segment.png" /></div>
+					<div id="graph06" class="petite"><img src="images/anim3/graph-segment.png" /></div>
+					<img src="images/slides/slide3.jpg" alt="" />
+				</div>
+				
+				<div id="slide4" class="item slide4">
+					<div id="fond-slide4"><img src="images/anim4/fond-slide4.png" alt="" /></div>
+					<div id="graph01"><img src="images/anim4/title-nature.png" /></div>
+					<div id="graph02"><img src="images/anim4/title-naturalite.png" /></div>
+					<div id="graph03"><img src="images/anim4/title-parfum.png" /></div>
+					<div id="graph04"><img src="images/anim4/title-offre.png" /></div>
+					<div id="graph05" class="fadein"><img src="images/anim4/sep-vertical.png" /></div>
+					<div id="graph06"><img src="images/anim4/title-contact.png" /></div>
+					<div id="graph07" class="fadein"><img src="images/anim4/graph-contact.png" /></div>
+					<img src="images/slides/slide4.jpg" alt="" />
+				</div>
+				
+				<div id="slide5" class="item slide5">
+					<div class="mentions"><img src="images/anim5/mentions.png" alt="" /></div>
+					<div id="graph01"><img src="images/anim5/title.png" /></div>
+					<div id="graph02"><img src="images/anim5/bloc-gauche.png" /></div>
+					<div id="graph03"><img src="images/anim5/bloc-droite.png" /></div>
+					<div id="graph04"><img src="images/anim5/objectif.png" /></div>
+					<img src="images/slides/slide5.jpg" alt="" />
+				</div>
+
+				<div id="slide6" class="item">
+					<div id="trigger-overlay-grenade" class="clic popup-grenade" style="width:25%;height:62%;top:30%;left:10%;">&nbsp;</div>
+					<div id="trigger-overlay-amande" class="clic popup-amande" style="width:25%;height:62%;top:30%;left:40%;">&nbsp;</div>
+					<div id="trigger-overlay-coton" class="clic popup-coton" style="width:25%;height:62%;top:30%;left:70%;">&nbsp;</div>
+					<img src="images/slides/slide6.jpg" alt="" />
+				</div>
+
+				<div id="slide7" class="item">
+					<img src="images/slides/slide7.jpg" alt="" />
+				</div>
+
+				<div id="slide8" class="item">
+					<img src="images/slides/slide8.jpg" alt="" />
+					<div id="trigger-overlay-video" class="clic" style="width:16%;height:35%;top:20%;left:10%;">&nbsp;</div>
+				</div>
+
+				<div id="slide9" class="item slide9">
+					<div id="graph01" class="fadein"><img src="images/anim9/merci.png" /></div>
+					<img src="images/slides/slide9.jpg" alt="" />
+				</div>
+		    </div>
+
+
+		    <nav>
+		        <a id="control-prev" class="looper-control" data-looper="prev" href="#controlLooper">&nbsp;<!-- <img src="images/clic-left.png" alt="" /> --></a>
+		        <a id="control-next" class="looper-control right" data-looper="next" href="#controlLooper">&nbsp;<!-- <img src="images/clic-right.png" alt="" /> --></a>
+		    </nav>
+		</div>
+
+    </div>
+
+    <!-- open/close -->
+	<div class="overlay menu overlay-contentpush">
+		<button type="button" class="overlay-close menu_close">&nbsp;</button>
+		<div class="clic menu_home" style="width:420px;height:80px;top:130px;left:300px;" onclick="document.location.href='index.html';">&nbsp;</div>
+		<div class="clic menu1" data-looper="to" data-args="1" href="#controlLooper"  style="width:420px;height:80px;top:230px;left:300px;">&nbsp;</div>
+		<div class="clic menu2" data-looper="to" data-args="5" href="#controlLooper"  style="width:420px;height:80px;top:340px;left:300px;">&nbsp;</div>
+		<div class="clic menu3" data-looper="to" data-args="6" href="#controlLooper"  style="width:420px;height:80px;top:440px;left:300px;">&nbsp;</div>
+		<div class="clic menu4" data-looper="to" data-args="8" href="#controlLooper"  style="width:420px;height:80px;top:540px;left:300px;">&nbsp;</div>
+		<img src="images/menu.png" alt="" />
 	</div>
 
-<script>
-$(".clic").on('touchstart', function() {
-		$(this).click();
-});
-</script>
+	<div class="popup overlay-popup overlay-contentscale">
+		<button type="button" class="overlay-close-popup menu_close">&nbsp;</button>
+		<div class="clic" style="width:10%;height:15%;top:43%;left:0;">&nbsp;</div>
+		<div class="clic" style="width:10%;height:15%;top:43%;right:0;" onclick="slidePopup();">&nbsp;</div>
+		<img src="images/slides/slide6-1.jpg" alt="" />
+	</div>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+	<div class="popup overlay-popup-amande overlay-contentscale">
+		<button type="button" class="overlay-close-popup-amande menu_close">&nbsp;</button>
+		<img src="images/slides/slide6-2.jpg" alt="" />
+	</div>
+
+	<div class="popup overlay-popup-coton overlay-contentscale">
+		<button type="button" class="overlay-close-popup-coton menu_close">&nbsp;</button>
+		<img src="images/slides/slide6-3.jpg" alt="" />
+	</div>
+
+	<div class="popup overlay-popup-video overlay-contentscale">
+		<button type="button" class="overlay-close-popup-video menu_close">&nbsp;</button>
+		<img src="images/slides/slide8-1.jpg" alt="" />
+	</div>
+
+
+<script src="js/classie.js"></script>
+<script src="js/demo7.js"></script>
+<script src="js/looper.js"></script>
+
 </body>
 </html>

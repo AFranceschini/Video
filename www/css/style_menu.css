@@ -1,0 +1,45 @@
+
+.btn_home{
+	position: absolute;
+	z-index: 2;
+	width: 90px;
+	height: 75px;
+	top:0;
+	left:0;
+	border: 0;
+}
+
+.btn_home img{
+	width: 90px !important;
+	height: 75px !important;
+}
+
+.overlay.menu > img{
+	width: 1024px;
+}
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+/* Overlay closing cross */
+.menu_close {
+	width: 88px;
+	height: 74px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	border: none;
+	background: url(../images/btn_home_close.jpg) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+}
